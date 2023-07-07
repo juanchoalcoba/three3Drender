@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;400&family=Rowdies:wght@300;400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: 'Rowdies', cursive;
+  overflow-x: hidden;
+  background: linear-gradient(#091013, #202020);
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.webgl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  transform: translateX(-50%);
+  color: #f3f2c7;
+}
+
+nav {
+  flex: 1;
+  z-index: 2;
+  position: relative;
+  padding: 4rem 8rem;
+  display: flex;
+  justify-content: space-between;
+  color: #f3f2c7;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f3f2c7;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #f3f2c7;
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+.parrafo {
+  z-index: 100;
+}
+
+.title {
+  color: #f3f2c7;
+  z-index: 2;
+  position: absolute;
+  font-size: 2.5rem;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+}
+
+.canvas-pointer {
+  cursor: pointer;
+}
